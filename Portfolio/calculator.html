@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style_calc.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- navigation section -->
+    <section id="navigation">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="/img/logo_portfolio.png"
+          /></a>
+          <button
+            class="navbar-toggler dropdown-toggle"
+            type="button"
+            data-bs-target="dropdown"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <img src="/img/dots.png" class="menu-btn" />
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Strona główna</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about_me.html">O mnie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="references.html">Referencje</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="calculator.html">Kalkulator oferty</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section id="calculator">
+      <div class="container mt-5">
+        <h1>Kalkulator stawki</h1>
+        <p>Wprowadź liczbę godzin w poszczególnych zakresach działań</p>
+        <form id="calculator-form">
+          <div class="form-group">
+            <label for="hours1">Godzina SEO - 37zł</label>
+            <input type="number" class="form-control" id="hours" min="0" />
+            <label for="hours2">Godzina zarządzania reklamą - 45zł</label>
+            <input type="number" class="form-control" id="hours" min="0" />
+            <label for="hours3">Godzina programowania - 64zł</label>
+            <input type="number" class="form-control" id="hours" min="0" />
+          </div>
+          <button type="submit" class="btn btn-primary">Oblicz</button>
+        </form>
+        <div id="total-cost" class="mt-3"></div>
+      </div>
+      <img src="/img/wave.svg" class="bottom-img" />
+    </section>
+    <!-- -------------------------- -->
+
+    <section id="footer">
+      <div class="container text-center">
+        <div class="row text-center">
+          <div class="col-md-4 footer-box">
+            <img src="/img/user.png" class="icon" />
+            <p>Julia Kapica</p>
+          </div>
+          <div class="col-md-4 footer-box">
+            <img src="/img/mail.png" class="icon" />
+            <p>Email: jkapica@edu.cdv.pl</p>
+          </div>
+          <div class="col-md-4 footer-box">
+            <img src="/img/phone-call.png" class="icon" />
+            <p>Nr telefonu: +48 123 456 789</p>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="#"> <img src="/img/linkedin.png" /></a>
+          <a href="#"> <img src="/img/facebook.png" /></a>
+          <a href="#"> <img src="/img/github-sign.png" /></a>
+        </div>
+        <hr />
+        <p class="copyright">Copyright by Julia Kapica WebDesign 2023</p>
+      </div>
+    </section>
+
+    <!-- -------------------------- -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.1/dist/umd/popper.min.js"
+      integrity="sha384-ZCXcmeGRBKjUO3+iO1ZBgkXRK0ZQ2YbFv0zQaV7sO1f0j+7LrZTEGXVXlLZOdTj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        // Set default rates
+        const xRate = 37;
+        const yRate = 45;
+        const zRate = 64;
+
+        // Calculate total cost when form is submitted
+        $("#calculator-form").submit(function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          // Get number of hours
+          const hours1 = $("#hours1").val();
+          const hours2 = $("#hours2").val();
+          const hours3 = $("#hours3").val();
+
+          // Calculate total cost
+          const totalCost = xRate * hours1 + yRate * hours2 + zRate * hours3;
+
+          // Display total cost
+          $("#total-cost").html(`Łączny koszt: $${totalCost}`);
+        });
+      });
+    </script>
+
+    <!--  -->
+  </body>
+</html>

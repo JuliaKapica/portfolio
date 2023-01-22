@@ -1,0 +1,112 @@
+*
+{margin: 0;
+padding: 0;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: thin;
+}
+#navigation {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0.5px 0.5px 100px white;
+}
+.navbar {
+    background-image: linear-gradient(to right, #b3abbf, #c7ebf0);
+    padding: 0 !important;
+}
+.navbar-brand img {
+    height: 85px;
+    padding-left: 20px;
+}
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    color: #343434 !important;
+    font-weight: thin; 
+    float: right;
+    text-align: left;
+    font-size: 130%;
+    transition: 0.5s;
+}
+
+.navbar-nav li a:hover {
+    color: #343434 !important;
+    font-weight: thin; 
+    float: right;
+    text-align: left;
+    font-size: 130%;
+    transform: translateY(-10px);
+}
+
+
+.menu-btn {
+    color: #343434;
+    
+}
+.navbar-toggler {
+    outline: none !important;
+}
+
+/* ------------------- */
+#calculator {
+    background-image: linear-gradient(to right,#b2abbf, #c7ebf0);
+    color: #343434;
+    padding-top: 5%;
+}
+.page-title {
+    font-size: 40px;
+    font-weight: thin;
+    margin-bottom: 50px;
+}
+.bottom-img {
+    width: 100%;
+}
+#calculator .btn-primary {
+    background-color: #fbc3cc;
+    border-color: #fbc3cc;
+    color: black;
+    margin-top: 20px;
+}
+/* ------------------- */
+#footer {
+    background-image: linear-gradient(to right, #b2abbf, #c7ebf0);
+    color: #343434;
+    
+}
+
+.footer-box {
+    padding: 20px;
+    font-size: 14px;
+}
+
+.footer-box .icon {
+    margin-right: 8px;
+    font-size: 25px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    
+}
+
+.social-icons img {
+    width: 30px;
+    transition: 0.5s;
+   margin: 0 10px;
+}
+.social-icons a:hover img {
+    transform: translateY(-10px);
+}
+
+hr {
+    background: white;
+}
+
+.copyright {
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    text-align: center;
+}
