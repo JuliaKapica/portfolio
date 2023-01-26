@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
 
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAv7//ANTU/wDt7f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAREQAAAAAAARIhEAAAAAARIiIRAAAAATMyIiEQAAARIzIiIhEAARIjIiIiIRABIiIiIiIiEBEiMyIiIiIREiMzMiIiIiESMzMyIiIiIREjMyIiIiIRASMzIRIiIhABEiIRESIhEAARIRABEhEAAAERAAAREAD+fwAA/D8AAPgfAADwDwAA4AcAAMADAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMGDAADjxwAA"
+      rel="icon"
+      type="image/x-icon"
+    />
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 
     <script
@@ -56,9 +62,9 @@
     <section id="navigation">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"
-            ><img src="/img/portfolio_logo.png"
-          /></a>
+          <a class="navbar-brand" href="index.html" id="main-title"
+            >Portfolio</a
+          >
           <button
             class="navbar-toggler dropdown-toggle"
             type="button"
@@ -82,13 +88,15 @@
                 <a class="nav-link" href="#about-scroll">O mnie</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#projects-scroll">Portfolio</a>
+                <a class="nav-link" href="#projects-scroll">Pliki</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#ref-scroll">Referencje</a>
+                <a class="nav-link" href="#ref-scroll">Talenty</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#calculator">Kalkulator oferty</a>
+                <a class="nav-link" href="#calculator-scroll"
+                  >Kalkulator oferty</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#form-scroll">Kontakt</a>
@@ -103,33 +111,28 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <p class="page-title">Portfolio</p>
-            <p>
-              Nazywam się Julia Kapica i jestem studentką drugiego roku studiów
-              inżynierskich informatyki na Collegium Da Vinci w Poznaniu.
-            </p>
+            <section id="banner-content">
+              <p class="page-title">Julia Kapica</p>
+              <p class="subtitle">studentka informatyki</p>
 
-            <p>
-              Znajdziesz tu opis mojej osoby i to czym się zajmuję. Dowiesz się
-              również nad jakimi projektami pracowałam. Z kolei w moim CV
-              znajdziesz opis moich umiejętności i kompetencji.
-            </p>
+              <p>
+                Znajdziesz tu opis mojej osoby i to czym się zajmuję. Dowiesz
+                się również nad jakimi projektami pracowałam. Z kolei w moim CV
+                znajdziesz opis moich umiejętności i kompetencji.
+              </p>
 
-            <button type="button" class="btn btn-primary" id="myBtn">
-              Zapisz się na newsletter
-            </button>
-            <div id="myModal" class="modal">
-              <!-- Modal content -->
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <section id="newsletter">
-                  <h1 class="title text-center">Newsletter</h1>
-                  <hr class="hr hr-blurry" />
-                  <div
-                    class="row d-flex justify-content-center align-items-center rows"
-                  >
-                    <div class="col-md-6">
-                      <div class="card">
+              <button type="button" class="btn btn-primary" id="myBtn">
+                Zapisz się na newsletter
+              </button>
+              <div id="myModal" class="modal">
+                <!--modal-newsletter -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <section id="newsletter">
+                    <div
+                      class="row d-flex justify-content-center align-items-center rows"
+                    >
+                      <div class="col-md-6 news">
                         <div class="text-center">
                           <img
                             src="/img/undraw_reminder_re_fe15.svg"
@@ -162,33 +165,32 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                </section>
+                  </section>
+                </div>
               </div>
-            </div>
+            </section>
           </div>
           <div class="col-md-6 text-center">
-            <img src="/img/undraw_proud_coder_re_exuy.svg" class="img-fluid" />
+            <img src="/img/avatar_new.jpg" class="img-fluid" />
           </div>
         </div>
       </div>
       <img src="/img/wave.svg" class="bottom-img" />
     </section>
+    <!-- about-me-section -->
     <div id="about-scroll"></div>
     <section id="about-me-container">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 text-center">
+            <img src="/img/IMG-1068.jpg" class="img-fluid" />
+          </div>
+          <div class="col-md-6" id="abt-me-content">
             <p class="page-title">O mnie</p>
-            <p>
-              Nazywam się Julia Kapica i jestem studentką drugiego roku studiów
-              inżynierskich informatyki na Collegium Da Vinci w Poznaniu.
-            </p>
 
             <p>
-              Znajdziesz tu opis mojej osoby i to czym się zajmuję. Dowiesz się
-              również nad jakimi projektami pracowałam. Z kolei w moim CV
-              znajdziesz opis moich umiejętności i kompetencji.
+              Jestem studentką drugiego roku studiów inżynierskich informatyki
+              na Collegium Da Vinci w Poznaniu.
             </p>
 
             <p>
@@ -197,133 +199,108 @@
               pasja. Zawsze szukam możliwości dalszego rozwoju w dziedzinach
               programowania i webdesignu.
             </p>
-            <a href="#" download="CV" id="breathing-button" class="breath-btn">
-              <img src="/img/download.png" class="download-btn" alt="CV" />
-              CV
-            </a>
-          </div>
 
-          <div class="col-md-6 text-center">
-            <img src="/img/avatar_new.jpg" class="img-fluid" />
-            <hr class="frame" />
-            <hr class="vertical" />
+            <p>
+              Interesuję się kulturą Bliskiego Wschodu, sztuką oraz makijażem.
+              Wolny czas poświęcam na podróże lub czytanie reportaży. Z
+              przyjemnością śledzę trendy w nowych technologiach.
+            </p>
+            <button type="button" class="download-btn">
+              <a
+                href="/files/Kapica_CV_informatyczne.pdf"
+                download="Kapica_CV_informatyczne.pdf"
+              >
+                <img src="/img/download.png" alt="CV" />
+                CV
+              </a>
+            </button>
           </div>
         </div>
       </div>
-      <img src="/img/wave.svg" class="bottom-img" />
     </section>
-    <!-- newsletter -->
-    <div id="newsletter-scroll"></div>
-
     <!-- projects -->
     <div id="projects-scroll"></div>
     <section id="projects">
-      <div class="container">
+      <div class="container text-center">
         <h1 class="title text-center">Poznaj moje projekty</h1>
         <hr class="hr hr-blurry" />
 
-        <!-- Carousel wrapper -->
-        <div
-          id="carouselBasicExample"
-          class="carousel slide carousel-fade"
-          data-mdb-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="card text-center" id="card-slider">
-                <div class="card-body">
-                  <h5 class="card-title">Portfolio</h5>
-                  <p class="card-text">
-                    Przedmiot: Webdesign<br />Język programowania: Bootstrap 5
-                  </p>
-                  <button type="button" class="btn btn-primary">Pobierz</button>
-                </div>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-md-4 baza">
+            <a href="/files/Kapica_database.rar" download="Kapica_database.rar">
+              <img src="/img/img-baza.png" />
+            </a>
           </div>
-
-          <div class="carousel-item">
-            <div class="card text-center" id="card-slider">
-              <div class="card-body">
-                <h5 class="card-title">Restauracja</h5>
-                <p class="card-text">
-                  Przedmiot: Programowanie obiektowe<br />Język programowania:
-                  C#
-                </p>
-                <button type="button" class="btn btn-primary">Pobierz</button>
-              </div>
-            </div>
+          <div class="col-md-4 scenka">
+            <a href="/files/wester_scene.fbx" download="wester_scene.fbx">
+              <img src="/img/img-scenka.png" />
+            </a>
           </div>
-
-          <div class="carousel-item">
-            <div class="card text-center" id="card-slider">
-              <div class="card-body">
-                <h5 class="card-title">Baza danych przedsiębiorstwa</h5>
-                <p class="card-text">
-                  Przedmiot: Systemy baz danych <br />Język programowania: pgSQL
-                </p>
-                <button type="button" class="btn btn-primary">Pobierz</button>
-              </div>
-            </div>
+          <div class="col-md-4 port">
+            <a href="https://github.com/JuliaKapica/portfolio">
+              <img src="/img/img-portfolio.png" />
+            </a>
           </div>
+        </div>
 
-          <!-- Controls -->
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-mdb-target="#carouselBasicExample"
-            data-mdb-slide="prev"
-          >
-            <img src="img/left-arrow.png" class="slider-icon" />
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-mdb-target="#carouselBasicExample"
-            data-mdb-slide="next"
-          >
-            <img src="/img/right-arrow.png" class="slider-icon" />
-          </button>
+        <div class="row">
+          <div class="col-md-4 fem">
+            <a href="/files/Esej tutorski.docx" download="Esej tutorski.docx">
+              <img src="/img/img-fem.png" />
+            </a>
+          </div>
+          <div class="col-md-4 res">
+            <a href="#" download="" class="disabled">
+              <img src="/img/img-restauracja.png" />
+            </a>
+          </div>
+          <div class="col-md-4 pbl">
+            <a
+              href="/files/Problem Based Learning.pdf"
+              download="Problem Based Learning.pdf"
+            >
+              <img src="/img/img-pbl.png" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!------references------>
+    <!------talents------>
     <div id="ref-scroll"></div>
-    <section id="references">
+    <section id="talents">
       <div class="container text-center">
-        <h1 class="title">Tak mówią o mnie inni</h1>
+        <h1 class="title">Moje talenty</h1>
         <hr class="hr hr-blurry" />
 
         <div class="row text-center">
           <div class="col-md-4 bd-container">
-            <img src="/img/undraw_Working_out_re_nhkg.png" class="body-img" />
-            <h4>Anna Kowalska</h4>
+            <img src="/img/naprawianie.png" class="body-img" />
+            <h4>Naprawianie</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-              pariatur veniam sint, aliquid eos dolor? Repellat, nesciunt
-              accusantium? Tempore quia corrupti at quaerat iure debitis
-              repellat inventore ut, natus exercitationem.
+              Uwielbiam rozwiązywać problemy. Podczas, gdy niektórzy są
+              przerażeni, dla mnie taka sytuacja jest źródłem energii. Wyzwania
+              związane z analizowaniem symptomów, identyfikowaniem tego, co
+              nieprawidłowe i znajdowanie rozwiązań sprawiają mi przyjemność.
             </p>
           </div>
           <div class="col-md-4 bd-container">
-            <img src="/img/undraw_Woman_re_afr8.png" class="body-img" />
-            <h4>Kelly Johnson</h4>
+            <img src="/img/aktywator.png" class="body-img" />
+            <h4>Aktywator</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-              pariatur veniam sint, aliquid eos dolor? Repellat, nesciunt
-              accusantium? Tempore quia corrupti at quaerat iure debitis
-              repellat inventore ut, natus exercitationem.
+              "Kiedy zaczynamy?" - to pytanie, które stale powraca w moim życiu.
+              Uważam, że działanie jest najlepszym sposobem uczenia się. Kiedy
+              analiza sytuacji się zakończy, rwę się do działania.
             </p>
           </div>
           <div class="col-md-4 bd-container">
-            <img src="/img/undraw_Ideas_flow_re_bmea.png" class="body-img" />
-            <h4>Marie Muller</h4>
+            <img src="/img/odkrywczosc.png" class="body-img" />
+            <h4>Odkrywczość</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-              pariatur veniam sint, aliquid eos dolor? Repellat, nesciunt
-              accusantium? Tempore quia corrupti at quaerat iure debitis
-              repellat inventore ut, natus exercitationem.
+              Fascynują mnie idee. Zachwycają mnie momenty, gdy uda mi się
+              odkryć pod skomplikowaną powierzchnią jakąś trafną, prostą
+              koncepcję. Taki talent pozwala na ciągłe szukanie nowych rozwiązań
+              i ulepszeń.
             </p>
           </div>
         </div>
@@ -331,33 +308,37 @@
     </section>
 
     <!-- calculator -->
-
+    <div id="calculator-scroll"></div>
     <section id="calculator">
-      <div class="container mt-5">
-        <h1 class="calc-title">Kalkulator stawki</h1>
-        <p>Wprowadź liczbę godzin w poszczególnych zakresach działań</p>
-        <form id="calculator-form">
-          <div class="form-group">
-            <label for="h1" class="form-desc">Godzina SEO - 37zł</label>
-            <input type="number" class="form-control" id="hours1" min="0" />
-            <br />
-            <label for="h2" class="form-desc"
-              >Godzina programowania - 64zł</label
+      <h1 class="title text-center">Kalkulator stawki</h1>
+      <hr class="hr hr-blurry" />
+      <div class="kalkulator">
+        <div class="container mt-5">
+          <p class="kalk-p">
+            Wprowadź liczbę godzin w poszczególnych zakresach działań
+          </p>
+          <form id="calculator-form">
+            <div class="form-group">
+              <label for="h1" class="form-desc">Godzina SEO - 37zł</label>
+              <input type="number" class="form-control" id="hours1" min="0" />
+              <br />
+              <label for="h2" class="form-desc"
+                >Godzina programowania - 64zł</label
+              >
+              <input type="number" class="form-control" id="hours2" min="0" />
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="calculateCost()"
             >
-            <input type="number" class="form-control" id="hours2" min="0" />
-          </div>
-          <button
-            type="button"
-            class="btn btn-primary"
-            onclick="calculateCost()"
-          >
-            Oblicz
-          </button>
-        </form>
-        <br /><br />
-        <p id="totalCost"></p>
+              Oblicz
+            </button>
+          </form>
+          <br /><br />
+          <p id="totalCost"></p>
+        </div>
       </div>
-      <img src="/img/wave.svg" class="bottom-img" />
     </section>
 
     <!-- form section -->
@@ -365,47 +346,37 @@
     <section id="form">
       <h1 class="title text-center">Skontaktuj się ze mną!</h1>
       <hr class="hr hr-blurry" />
-      <div class="card justify-content-center">
-        <div class="card-body">
-          <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Twój adres email</label
-              >
+      <div class="formularz">
+        <div class="container mt-5">
+          <form id="form-bck">
+            <div class="form-group">
+              <label for="name">Imię</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Wpisz swoje imię"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
-                placeholder="Email"
-                aria-describedby="emailHelp"
-              />
-              <div id="emailHelp" class="form-text">To pole jest wymagane</div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label"
-                >Treść wiadomości</label
-              >
-              <input
-                type="password"
-                class="form-control"
-                placeholder="Tekst"
-                id="exampleInputPassword1"
+                id="email"
+                placeholder="Wpisz swój email"
               />
             </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1"
-                >Wyrażam zgodę na przetwarzanie danych w celu wysyłki wiadomości
-                email, w tym na wysyłkę treści marketingowych. Wiem, że
-                informacje o przetwarzaniu moich danych znajdę w polityce
-                prywatności.</label
-              >
+            <div class="form-group">
+              <label for="message">Wiadomość</label>
+              <textarea class="form-control" id="message" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Wyślij</button>
+            <button
+              type="submit"
+              class="btn btn-primary justify-content-center"
+            >
+              Submit
+            </button>
           </form>
         </div>
       </div>
