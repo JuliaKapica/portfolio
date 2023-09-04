@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAv7//ANTU/wDt7f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAREQAAAAAAARIhEAAAAAARIiIRAAAAATMyIiEQAAARIzIiIhEAARIjIiIiIRABIiIiIiIiEBEiMyIiIiIREiMzMiIiIiESMzMyIiIiIREjMyIiIiIRASMzIRIiIhABEiIRESIhEAARIRABEhEAAAERAAAREAD+fwAA/D8AAPgfAADwDwAA4AcAAMADAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMGDAADjxwAA"
+      rel="icon"
+      type="image/x-icon"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function calculateCost() {
+        var a = 37;
+        var b = 64;
+        var hours1 = document.getElementById("hours1").value;
+        var hours2 = document.getElementById("hours2").value;
+        var totalCost = a * hours1 + b * hours2;
+        document.getElementById("totalCost").innerHTML =
+          "Łączny koszt: " + totalCost + "zł";
+      }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- navigation section -->
+    <section id="navigation">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" id="main-title"
+            >Portfolio</a
+          >
+          <button
+            class="navbar-toggler dropdown-toggle"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <img src="/img/dots.png" class="menu-btn" />
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Strona główna</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about-scroll">O mnie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects-scroll">Pliki</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ref-scroll">Talenty</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#calculator-scroll"
+                  >Kalkulator oferty</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#form-scroll">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!----- banner section ---------------->
+    <section id="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <section id="banner-content">
+              <p class="page-title">Julia Kapica</p>
+              <p class="subtitle">studentka informatyki</p>
+
+              <p>
+                Znajdziesz tu opis mojej osoby i to czym się zajmuję. Dowiesz
+                się również nad jakimi projektami pracowałam. Z kolei w moim CV
+                znajdziesz opis moich umiejętności i kompetencji.
+              </p>
+
+              <button type="button" class="btn btn-primary" id="myBtn">
+                Zapisz się na newsletter
+              </button>
+              <div id="myModal" class="modal">
+                <!--modal-newsletter -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <section id="newsletter">
+                    <div
+                      class="row d-flex justify-content-center align-items-center rows"
+                    >
+                      <div class="col-md-6 news">
+                        <div class="text-center">
+                          <img
+                            src="/img/undraw_reminder_re_fe15.svg"
+                            width="200"
+                          />
+                          <span class="d-block mt-3"
+                            >Zasubskrybuj mój newsletter, aby otrzymywać
+                            powiadomienia
+                            <br />
+                            o nowych projektach w portfolio</span
+                          >
+                          <div class="mx-5">
+                            <div class="input-group mb-3 mt-4">
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Twój email"
+                                aria-label="Recipient's username"
+                                aria-describedby="button-addon2"
+                              />
+                              <button
+                                class="btn btn-success border-rad"
+                                type="button"
+                                id="button-addon2"
+                              >
+                                Subskrybuj
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="/img/avatar_new.jpg" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+      <img src="/img/wave.svg" class="bottom-img" />
+    </section>
+    <!-- about-me-section -->
+    <div id="about-scroll"></div>
+    <section id="about-me-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img src="/img/IMG-1068.jpg" class="img-fluid" />
+          </div>
+          <div class="col-md-6" id="abt-me-content">
+            <p class="page-title">O mnie</p>
+
+            <p>
+              Jestem studentką drugiego roku studiów inżynierskich informatyki
+              na Collegium Da Vinci w Poznaniu.
+            </p>
+
+            <p>
+              Jako młoda osoba jestem efektywna i kreatywna w pracy, w którą
+              wkładam całe serce. Ale informatyka to przede wszystkim moja
+              pasja. Zawsze szukam możliwości dalszego rozwoju w dziedzinach
+              programowania i webdesignu.
+            </p>
+
+            <p>
+              Interesuję się kulturą Bliskiego Wschodu, sztuką oraz makijażem.
+              Wolny czas poświęcam na podróże lub czytanie reportaży. Z
+              przyjemnością śledzę trendy w nowych technologiach.
+            </p>
+            <button type="button" class="download-btn">
+              <a
+                href="/files/Kapica_CV_informatyczne.pdf"
+                download="Kapica_CV_informatyczne.pdf"
+              >
+                <img src="/img/download.png" alt="CV" />
+                CV
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- projects -->
+    <div id="projects-scroll"></div>
+    <section id="projects">
+      <div class="container text-center">
+        <h1 class="title text-center">Poznaj moje projekty</h1>
+        <hr class="hr hr-blurry" />
+
+        <div class="row">
+          <div class="col-md-4 baza">
+            <a href="/files/Kapica_database.rar" download="Kapica_database.rar">
+              <img src="/img/img-baza.png" />
+            </a>
+          </div>
+          <div class="col-md-4 scenka">
+            <a href="/files/wester_scene.fbx" download="wester_scene.fbx">
+              <img src="/img/img-scenka.png" />
+            </a>
+          </div>
+          <div class="col-md-4 port">
+            <a href="https://github.com/JuliaKapica/portfolio">
+              <img src="/img/img-portfolio.png" />
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 fem">
+            <a href="/files/Esej tutorski.docx" download="Esej tutorski.docx">
+              <img src="/img/img-fem.png" />
+            </a>
+          </div>
+          <div class="col-md-4 res">
+            <a href="#" download="" class="disabled">
+              <img src="/img/img-restauracja.png" />
+            </a>
+          </div>
+          <div class="col-md-4 pbl">
+            <a
+              href="/files/Problem Based Learning.pdf"
+              download="Problem Based Learning.pdf"
+            >
+              <img src="/img/img-pbl.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------talents------>
+    <div id="ref-scroll"></div>
+    <section id="talents">
+      <div class="container text-center">
+        <h1 class="title">Moje talenty</h1>
+        <hr class="hr hr-blurry" />
+
+        <div class="row text-center">
+          <div class="col-md-4 bd-container">
+            <img src="/img/naprawianie.png" class="body-img" />
+            <h4>Naprawianie</h4>
+            <p>
+              Uwielbiam rozwiązywać problemy. Podczas, gdy niektórzy są
+              przerażeni, dla mnie taka sytuacja jest źródłem energii. Wyzwania
+              związane z analizowaniem symptomów, identyfikowaniem tego, co
+              nieprawidłowe i znajdowanie rozwiązań sprawiają mi przyjemność.
+            </p>
+          </div>
+          <div class="col-md-4 bd-container">
+            <img src="/img/aktywator.png" class="body-img" />
+            <h4>Aktywator</h4>
+            <p>
+              "Kiedy zaczynamy?" - to pytanie, które stale powraca w moim życiu.
+              Uważam, że działanie jest najlepszym sposobem uczenia się. Kiedy
+              analiza sytuacji się zakończy, rwę się do działania.
+            </p>
+          </div>
+          <div class="col-md-4 bd-container">
+            <img src="/img/odkrywczosc.png" class="body-img" />
+            <h4>Odkrywczość</h4>
+            <p>
+              Fascynują mnie idee. Zachwycają mnie momenty, gdy uda mi się
+              odkryć pod skomplikowaną powierzchnią jakąś trafną, prostą
+              koncepcję. Taki talent pozwala na ciągłe szukanie nowych rozwiązań
+              i ulepszeń.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- calculator -->
+    <div id="calculator-scroll"></div>
+    <section id="calculator">
+      <h1 class="title text-center">Kalkulator stawki</h1>
+      <hr class="hr hr-blurry" />
+      <div class="kalkulator">
+        <div class="container mt-5">
+          <p class="kalk-p">
+            Wprowadź liczbę godzin w poszczególnych zakresach działań
+          </p>
+          <form id="calculator-form">
+            <div class="form-group">
+              <label for="h1" class="form-desc">Godzina SEO - 37zł</label>
+              <input type="number" class="form-control" id="hours1" min="0" />
+              <br />
+              <label for="h2" class="form-desc"
+                >Godzina programowania - 64zł</label
+              >
+              <input type="number" class="form-control" id="hours2" min="0" />
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="calculateCost()"
+            >
+              Oblicz
+            </button>
+          </form>
+          <br /><br />
+          <p id="totalCost"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- form section -->
+    <div id="form-scroll"></div>
+    <section id="form">
+      <h1 class="title text-center">Skontaktuj się ze mną!</h1>
+      <hr class="hr hr-blurry" />
+      <div class="formularz">
+        <div class="container mt-5">
+          <form id="form-bck">
+            <div class="form-group">
+              <label for="name">Imię</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Wpisz swoje imię"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Wpisz swój email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Wiadomość</label>
+              <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary justify-content-center"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <section id="footer">
+      <div class="container text-center">
+        <div class="row text-center">
+          <div class="col-md-4 footer-box">
+            <img src="/img/user.png" class="icon" />
+            <p>Julia Kapica</p>
+          </div>
+          <div class="col-md-4 footer-box">
+            <img src="/img/mail.png" class="icon" />
+            <p>Email: jkapica@edu.cdv.pl</p>
+          </div>
+          <div class="col-md-4 footer-box">
+            <img src="/img/phone-call.png" class="icon" />
+            <p>Nr telefonu: +48 123 456 789</p>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/julia-kapica/">
+            <img src="/img/linkedin.png"
+          /></a>
+          <a href="https://www.facebook.com/julka.ka.75/">
+            <img src="/img/facebook.png"
+          /></a>
+          <a href="https://github.com/juliakapica">
+            <img src="/img/github-sign.png"
+          /></a>
+        </div>
+        <hr />
+        <p class="copyright">Copyright by Julia Kapica WebDesign 2023</p>
+      </div>
+    </section>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
