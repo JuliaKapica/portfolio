@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Julia Kapica</title>
 
     <link
       href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAv7//ANTU/wDt7f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAREQAAAAAAARIhEAAAAAARIiIRAAAAATMyIiEQAAARIzIiIhEAARIjIiIiIRABIiIiIiIiEBEiMyIiIiIREiMzMiIiIiESMzMyIiIiIREjMyIiIiIRASMzIRIiIhABEiIRESIhEAARIRABEhEAAAERAAAREAD+fwAA/D8AAPgfAADwDwAA4AcAAMADAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMGDAADjxwAA"
@@ -43,17 +43,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      function calculateCost() {
-        var a = 37;
-        var b = 64;
-        var hours1 = document.getElementById("hours1").value;
-        var hours2 = document.getElementById("hours2").value;
-        var totalCost = a * hours1 + b * hours2;
-        document.getElementById("totalCost").innerHTML =
-          "Łączny koszt: " + totalCost + "zł";
-      }
-    </script>
+    
 
     <link rel="stylesheet" href="/css/style.css" />
   </head>
@@ -93,11 +83,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#ref-scroll">Talenty</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#calculator-scroll"
-                  >Kalkulator oferty</a
-                >
-              </li>
+              
               <li class="nav-item">
                 <a class="nav-link" href="#form-scroll">Kontakt</a>
               </li>
@@ -106,6 +92,8 @@
         </div>
       </nav>
     </section>
+
+
     <!----- banner section ---------------->
     <section id="banner">
       <div class="container">
@@ -121,10 +109,12 @@
                 znajdziesz opis moich umiejętności i kompetencji.
               </p>
 
-              <button type="button" class="btn btn-primary" id="myBtn">
+              <button type="button" class="btn btn-newsletter" id="myBtn">
                 Zapisz się na newsletter
               </button>
               <div id="myModal" class="modal">
+
+
                 <!--modal-newsletter -->
                 <div class="modal-content">
                   <span class="close">&times;</span>
@@ -171,12 +161,14 @@
             </section>
           </div>
           <div class="col-md-6 text-center">
-            <img src="/img/avatar_new.jpg" class="img-fluid" />
+            <!-- <img src="/img/avatar_new.jpg" class="img-fluid" /> -->
           </div>
         </div>
       </div>
-      <img src="/img/wave.svg" class="bottom-img" />
+      <!-- <img src="/img/wave.svg" class="bottom-img" /> -->
     </section>
+
+
     <!-- about-me-section -->
     <div id="about-scroll"></div>
     <section id="about-me-container">
@@ -189,7 +181,7 @@
             <p class="page-title">O mnie</p>
 
             <p>
-              Jestem studentką drugiego roku studiów inżynierskich informatyki
+              Jestem studentką trzeciego roku studiów inżynierskich informatyki
               na Collegium Da Vinci w Poznaniu.
             </p>
 
@@ -201,8 +193,11 @@
             </p>
 
             <p>
+              Uczestniczę w życiu studenckim będąc liderką koła naukowego Vinci Square w Collegium Da Vinci. Brałam czynny udział w kilku projektach oraz byłam prowadzącą Warsztatów z kreatywności dla uczniów szkół średnich w Poznaniu.
+            </p>
+            <p>
               Interesuję się kulturą Bliskiego Wschodu, sztuką oraz makijażem.
-              Wolny czas poświęcam na podróże lub czytanie reportaży. Z
+              Wolny czas poświęcam na podróże, czytanie reportaży lub granie w planszówki. Z
               przyjemnością śledzę trendy w nowych technologiach.
             </p>
             <button type="button" class="download-btn">
@@ -210,14 +205,15 @@
                 href="/files/Kapica_CV_informatyczne.pdf"
                 download="Kapica_CV_informatyczne.pdf"
               >
-                <img src="/img/download.png" alt="CV" />
-                CV
+              POBIERZ CV
               </a>
             </button>
           </div>
         </div>
       </div>
     </section>
+
+
     <!-- projects -->
     <div id="projects-scroll"></div>
     <section id="projects">
@@ -307,39 +303,7 @@
       </div>
     </section>
 
-    <!-- calculator -->
-    <div id="calculator-scroll"></div>
-    <section id="calculator">
-      <h1 class="title text-center">Kalkulator stawki</h1>
-      <hr class="hr hr-blurry" />
-      <div class="kalkulator">
-        <div class="container mt-5">
-          <p class="kalk-p">
-            Wprowadź liczbę godzin w poszczególnych zakresach działań
-          </p>
-          <form id="calculator-form">
-            <div class="form-group">
-              <label for="h1" class="form-desc">Godzina SEO - 37zł</label>
-              <input type="number" class="form-control" id="hours1" min="0" />
-              <br />
-              <label for="h2" class="form-desc"
-                >Godzina programowania - 64zł</label
-              >
-              <input type="number" class="form-control" id="hours2" min="0" />
-            </div>
-            <button
-              type="button"
-              class="btn btn-primary"
-              onclick="calculateCost()"
-            >
-              Oblicz
-            </button>
-          </form>
-          <br /><br />
-          <p id="totalCost"></p>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- form section -->
     <div id="form-scroll"></div>
